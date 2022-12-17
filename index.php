@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    require "Db.php";
+    require "./database/DB.php";
 
     if(isset($_SESSION["id"])){
         $records = $conn->prepare("SELECT id, name, email, password FROM users WHERE id=:id");
@@ -24,7 +24,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/indexStyles.css">
+    <link rel="stylesheet" href="./assets/css/indexStyles.css">
     <title>Copsevir</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
             <div class="container__welcome">
                 <h3>Welcome <?= $user["name"];?></h3>
                 <p>You are already loged</p>
-                <p>you can choose items here: <a href="products.php">Buy!</a></p>
+                <p>you can see Pokemons here: <a href="Pokedex.php">Pokedex!</a></p>
             </div>
             <div class="container__footer">
                 <p>Made By <a href="http://portafoliojuanobando.000webhostapp.com/html/index.html">Juan Jose Obando P.</a></p>

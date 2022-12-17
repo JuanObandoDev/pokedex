@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require "DB.php";
+    require "./database/DB.php";
 
     if(!empty($_POST["email"]) && !empty($_POST["password"])){
         $records = $conn->prepare("SELECT id, email FROM usuarios WHERE email=:email AND password=:password");
@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/RALStyles.css">
+    <link rel="stylesheet" href="./assets/css/RALStyles.css">
     <title>LogIn</title>
 </head>
 <body>

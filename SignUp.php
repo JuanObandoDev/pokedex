@@ -1,5 +1,5 @@
 <?php
-    require "DB.php";
+    require "./database/DB.php";
     if(!empty($_POST["name"]) && !empty($_POST["lastname"]) && !empty($_POST["email"]) && !empty($_POST["password"])){
         $sql = "INSERT INTO usuarios (name, lastname, email, password) VALUE (:name, :lastname, :email, :password)";
         $stmt = $conn->prepare($sql);
@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/RALStyles.css">
+    <link rel="stylesheet" href="./assets/css/RALStyles.css">
     <title>SignUp</title>
 </head>
 <body>
@@ -38,6 +38,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/RALMain.js"></script>
+    <script src="./assets/js/RALMain.js"></script>
 </body>
 </html>

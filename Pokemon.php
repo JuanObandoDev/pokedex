@@ -2,7 +2,7 @@
     if(!empty($_GET) && isset($_GET["id_pokemon"])){
         $id_pokemon = $_GET["id_pokemon"];
     }else{
-        header("Location: PokeApi.php");
+        header("Location: Pokedex.php");
     }
 ?>
 
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/PokemonStyles.css">
+    <link rel="stylesheet" href="./assets/css/PokemonStyles.css">
     <title>Pokemon</title>
 </head>
 <body>
